@@ -16,7 +16,7 @@ def result():
     
       re=FetchData.data()
       
-      return render_template("result.html")
+      return render_template("result.html",tables= [re.to_html()])
   
 if __name__ == '__main__':
     app.run(port=5000, debug=True)
