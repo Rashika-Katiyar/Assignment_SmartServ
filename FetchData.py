@@ -22,6 +22,8 @@ def data():
         
         result.append([products[i]['title'],int(products[i]['popularity']), products[i]['price'], products[i]['subcategory']])
         
+    df= pd.DataFrame(result,columns=['Title', 'Popularity','Price', 'Sub-Category'])
     
+    df= df.sort_values(by='Popularity', ascending= False)
        
     return df    
